@@ -12,7 +12,7 @@ export class Pessoa{
   @GridColumn({ label: 'Nome', type: 'texto', ordem: 1 })
   nome: string;
 
-  @GridColumn({ label: 'Documento', type: 'cpf', ordem: 2 })
+  @GridColumn({ label: 'Documento', type: 'documento', ordem: 2 })
   documento: string;
 
   email: string;

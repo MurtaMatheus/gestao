@@ -140,11 +140,12 @@ export class GridComponent {
       case 'date':
         return this.formatDate(value);
 
-      case 'cpf':
+      case 'documento':
+        if (value.toString().length <= 11) {
         return this.applyMask(value, col.mask ?? '000.000.000-00');
-
-      case 'cnpj':
-        return this.applyMask(value, col.mask ?? '00.000.000/0000-00 ');
+      }
+        else {
+        return this.applyMask(value, col.mask ?? '00.000.000/0000-00 ');}
 
       case 'telefone':
         return this.applyMask('11987654321', '(00) 00000-0000');
